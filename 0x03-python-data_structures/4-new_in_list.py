@@ -1,14 +1,22 @@
 #!/usr/bin/python3
-def no_c(my_string):
-    length = len(my_string)
+def new_in_list(my_list, idx, element):
+    """
+    Replaces an element in a copy of a list at a specific position
+    ...
+    Parameters
+    ----------
+    my_list : list
+        The list of elements
+    idx : integer
+        The given position
+    element : the new element
+    Return:
+        The copy of the list if idx is negative or
+        if idx out of range (> len(my_list))
+    """
 
-    j = 0
+    list_copy = my_list.copy()
 
-    new_string = my_string[:]
-
-    for i in range(length):
-        if (my_string[i] == 'c' or my_string[i] == 'C'):
-            new_string = new_string[:(i - j)] + my_string[(i + 1):]
-            j += 1
-
-    return (new_string)
+    if idx >= 0 and idx <= (len(my_list) - 1):
+        list_copy[idx] = element
+    return list_copy
