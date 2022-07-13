@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+mk#!/usr/bin/python3
 """
 This program writes in a file if doesn't exists create the file
 """
